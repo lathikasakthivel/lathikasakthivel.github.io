@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Understanding LSTM Autoencoders for Anomaly Detection — Lathika Sakthivel" />
+  <meta name="author" content="Lathika Sakthivel" />
+  <meta name="theme-color" content="#0c0c0a" />
+  <title>LSTM Autoencoders for Anomaly Detection — Lathika Sakthivel</title>
+  <link rel="icon" type="image/x-icon" href="../assets/favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=IBM+Plex+Mono:wght@400;500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/portfolio.css" />
+</head>
+<body>
+  <a class="skip-link" href="#article">Skip to article</a>
+  <header class="nav is-scrolled" id="nav">
+    <div class="nav-inner">
+      <a class="logo" href="../index.html">
+        <span class="logo-mark">LS</span>
+        <span class="logo-name">Lathika Sakthivel <small>Software · Data · Automation</small></span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#work">Work</a>
+        <a href="../index.html#skills">Skills</a>
+        <a href="../index.html#journey">Journey</a>
+        <a href="../index.html#contact">Contact</a>
+      </nav>
+      <a class="nav-cta" href="../assets/Lathika%20S-Resume.pdf" download>Resume</a>
+      <button class="menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"><span></span></button>
+    </div>
+  </header>
+  <div class="mobile-menu" id="mobile-menu" hidden>
+    <a href="../index.html#about">About</a>
+    <a href="../index.html#work">Work</a>
+    <a href="index.html">Notes</a>
+    <a href="../index.html#contact">Contact</a>
+  </div>
+  <main>
+    <article class="page-hero wrap article" id="article">
+      <span class="eyebrow">Notes</span>
+      <h1>Understanding LSTM autoencoders for anomaly detection</h1>
+      <p class="meta">Lathika Sakthivel · 20 November 2025 · from the AutoEDA project</p>
+      <p>In AutoEDA I used LSTM autoencoders to find anomalies in multivariate time-series. The point was not to decorate a notebook — it was to flag unusual patterns without needing a pile of labeled incidents.</p>
+      <h2>What autoencoders actually do</h2>
+      <p>An autoencoder is an unsupervised network with two jobs:</p>
+      <ul>
+        <li><strong>Encoder</strong> — compress the input into a smaller representation.</li>
+        <li><strong>Decoder</strong> — rebuild the original input from that representation.</li>
+      </ul>
+      <p>Training minimizes the gap between input and reconstruction. Normal points reconstruct cleanly. Odd points do not. That gap is the signal.</p>
+      <h2>Why LSTM for sequences</h2>
+      <p>Plain autoencoders are fine for static rows. Time-series is a sequence. LSTMs are built to keep long-range dependencies, so an LSTM autoencoder can reconstruct a window of time instead of a single snapshot.</p>
+      <h2>How it sat inside AutoEDA</h2>
+      <p>The TensorFlow model took multivariate windows and ran them through:</p>
+      <ol>
+        <li>An input layer for the multivariate sequence</li>
+        <li>LSTM encoder layers that collapse the window into a vector</li>
+        <li>A bottleneck for the compressed state</li>
+        <li>LSTM decoder layers that rebuild the sequence</li>
+        <li>An output layer for the reconstruction</li>
+      </ol>
+      <p>It learned on ordinary data. At inference, reconstruction error above a threshold meant “look at this.”</p>
+      <h2>What that bought</h2>
+      <ul>
+        <li>No labeled anomalies required for training</li>
+        <li>Several series at once, not one column at a time</li>
+        <li>Temporal structure actually used, not flattened away</li>
+        <li>An error value you can show a person, not just a binary flag</li>
+      </ul>
+      <p>The same idea shows up in fraud, maintenance, intrusion detection, and factory quality checks — anywhere “normal” has a shape and “wrong” is rare.</p>
+      <h2>Closing</h2>
+      <p>LSTM autoencoders are useful when the dataset is sequential, labels are scarce, and you need a reason to look closer. In AutoEDA they were one piece of a larger automation loop, not the whole product.</p>
+      <p style="margin-top:2rem"><a class="btn btn-ghost" href="index.html">Back to notes</a></p>
+    </article>
+  </main>
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <p>© <span id="year">2026</span> Lathika Sakthivel</p>
+      <p><a href="../index.html">Home</a></p>
+    </div>
+  </footer>
+  <script src="../js/data.js"></script>
+  <script src="../js/app.js"></script>
+</body>
+</html>
