@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Event gallery — Lathika Sakthivel" />
   <meta name="author" content="Lathika Sakthivel" />
-  <meta name="theme-color" content="#0c0c0a" />
+  <meta name="theme-color" content="#060914" />
   <title>Gallery — Lathika Sakthivel</title>
   <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -28,121 +28,189 @@
         <a href="index.html#about">About</a>
         <a href="index.html#work">Work</a>
         <a href="index.html#skills">Skills</a>
-        <a href="index.html#journey">Journey</a>
+        <a href="achievements.html">Achievements</a>
+        <a href="gallery.html" class="is-active" aria-current="page">Gallery</a>
         <a href="index.html#contact">Contact</a>
       </nav>
       <a class="nav-cta" href="assets/Lathika%20S-Resume.pdf" download data-cursor="link">Resume</a>
-      <button class="menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
-        <span></span>
-      </button>
+      <button class="menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"><span></span></button>
     </div>
   </header>
 
   <div class="mobile-menu" id="mobile-menu" hidden>
+    <a href="index.html">Home</a>
     <a href="index.html#about">About</a>
     <a href="index.html#work">Work</a>
-    <a href="index.html#skills">Skills</a>
-    <a href="index.html#journey">Journey</a>
-    <a href="index.html#contact">Contact</a>
+    <a href="achievements.html">Achievements</a>
     <a href="gallery.html">Gallery</a>
+    <a href="index.html#contact">Contact</a>
     <a href="assets/Lathika%20S-Resume.pdf" download>Resume</a>
   </div>
 
   <main>
     <header class="page-hero wrap" id="gallery">
       <span class="eyebrow">Gallery</span>
-      <h1>Rooms I showed up in</h1>
-      <p>Hackathons, symposiums, and the leadership work alongside the code. Tap a frame to open it.</p>
+      <h1>Every frame from the work</h1>
+      <p>All event photos on this site — hackathons, symposiums, leadership, and the rooms in between. Tap any image to enlarge it.</p>
+      <div class="page-actions">
+        <a class="btn btn-primary" href="achievements.html">Achievements</a>
+        <a class="btn btn-ghost" href="index.html">Back home</a>
+      </div>
     </header>
 
-    <div class="wrap gallery-grid stagger">
-      <button class="g-card" type="button" data-lightbox="assets/UnHack'25.jpeg" data-caption="UnHack 2025 — Winner, KLA" data-cursor="view">
-        <img src="assets/UnHack'25.jpeg" alt="UnHack 2025 Hackathon" width="640" height="420" loading="lazy" />
-        <div class="g-body">
-          <span class="badge">Winner</span>
-          <h2>UnHack 2025</h2>
-          <p>KLA. Built under time pressure, with a team.</p>
+    <div class="wrap" style="padding-bottom:4.5rem">
+      <section class="gallery-block">
+        <h2>UnHack 2025</h2>
+        <p class="lead">Winner · KLA</p>
+        <div class="gallery-grid stagger">
+          <button class="g-card" type="button" data-lightbox="assets/UnHack'25.jpeg" data-caption="UnHack 2025 — Winner, KLA" data-cursor="view">
+            <img src="assets/UnHack'25.jpeg" alt="UnHack 2025 Hackathon" width="640" height="420" loading="lazy" />
+            <div class="g-body"><span class="badge">Winner</span><h2>UnHack 2025</h2></div>
+          </button>
+          <button class="g-card" type="button" data-lightbox="assets/UNHACK2.jpeg" data-caption="UnHack 2025 — Winner, KLA" data-cursor="view">
+            <img src="assets/UNHACK2.jpeg" alt="UnHack 2025, second photo" width="640" height="420" loading="lazy" />
+            <div class="g-body"><span class="badge">Winner</span><h2>UnHack 2025</h2></div>
+          </button>
         </div>
-      </button>
+      </section>
 
-      <button class="g-card" type="button" data-lightbox="assets/Thinnklytics'25.jpeg" data-caption="Thinklytics Login 2025 — Winner, PSG College of Technology" data-cursor="view">
-        <img src="assets/Thinnklytics'25.jpeg" alt="Thinklytics Login 2025" width="640" height="420" loading="lazy" />
-        <div class="g-body">
-          <span class="badge">Winner</span>
-          <h2>Thinklytics Login 2025</h2>
-          <p>Tech symposium, PSG College of Technology.</p>
+      <section class="gallery-block">
+        <h2>Thinklytics Login 2025</h2>
+        <p class="lead">Winner · PSG College of Technology</p>
+        <div class="gallery-grid stagger">
+          <button class="g-card" type="button" data-lightbox="assets/Thinnklytics'25.jpeg" data-caption="Thinklytics Login 2025 — Winner, PSG College of Technology" data-cursor="view">
+            <img src="assets/Thinnklytics'25.jpeg" alt="Thinklytics Login 2025" width="640" height="420" loading="lazy" />
+            <div class="g-body"><span class="badge">Winner</span><h2>Thinklytics Login 2025</h2></div>
+          </button>
         </div>
-      </button>
+      </section>
 
-      <button class="g-card" type="button" data-lightbox="assets/CodeSprint'25.jpeg" data-caption="Code Sprint Login 2025 — Winner, PSG College of Technology" data-cursor="view">
-        <img src="assets/CodeSprint'25.jpeg" alt="Code Sprint Login 2025" width="640" height="420" loading="lazy" />
-        <div class="g-body">
-          <span class="badge">Winner</span>
-          <h2>Code Sprint Login 2025</h2>
-          <p>Tech symposium, PSG College of Technology.</p>
+      <section class="gallery-block">
+        <h2>Code Sprint Login 2025</h2>
+        <p class="lead">Winner · PSG College of Technology</p>
+        <div class="gallery-grid stagger">
+          <button class="g-card" type="button" data-lightbox="assets/CodeSprint'25.jpeg" data-caption="Code Sprint Login 2025 — Winner, PSG College of Technology" data-cursor="view">
+            <img src="assets/CodeSprint'25.jpeg" alt="Code Sprint Login 2025" width="640" height="420" loading="lazy" />
+            <div class="g-body"><span class="badge">Winner</span><h2>Code Sprint Login 2025</h2></div>
+          </button>
         </div>
-      </button>
+      </section>
 
-      <button class="g-card" type="button" data-lightbox="assets/KARPAGAM.jpeg" data-caption="National Level Project Expo 2025 — Top 20, Karpagam Institute of Technology" data-cursor="view">
-        <img src="assets/KARPAGAM.jpeg" alt="National Level Project Expo 2025" width="640" height="420" loading="lazy" />
-        <div class="g-body">
-          <span class="badge">Top 20</span>
-          <h2>Project Expo 2025</h2>
-          <p>Karpagam Institute of Technology, Coimbatore.</p>
+      <section class="gallery-block">
+        <h2>National Level Project Expo 2025</h2>
+        <p class="lead">Top 20 · Karpagam Institute of Technology</p>
+        <div class="gallery-grid stagger">
+          <button class="g-card" type="button" data-lightbox="assets/KARPAGAM.jpeg" data-caption="National Level Project Expo 2025 — Top 20, Karpagam Institute of Technology" data-cursor="view">
+            <img src="assets/KARPAGAM.jpeg" alt="National Level Project Expo 2025" width="640" height="420" loading="lazy" />
+            <div class="g-body"><span class="badge">Top 20</span><h2>Project Expo 2025</h2></div>
+          </button>
+          <button class="g-card" type="button" data-lightbox="assets/KARPAGAM2.jpeg" data-caption="National Level Project Expo 2025 — Karpagam Institute of Technology" data-cursor="view">
+            <img src="assets/KARPAGAM2.jpeg" alt="National Level Project Expo 2025, second photo" width="640" height="420" loading="lazy" />
+            <div class="g-body"><span class="badge">Top 20</span><h2>Project Expo 2025</h2></div>
+          </button>
         </div>
-      </button>
+      </section>
 
-      <button class="g-card" type="button" data-lightbox="assets/PaperPresentation'25.jpeg" data-caption="Paper Presentation Mechatrix ’25 — Runner up, NIET Coimbatore" data-cursor="view">
-        <img src="assets/PaperPresentation'25.jpeg" alt="Paper Presentation Mechatrix 2025" width="640" height="420" loading="lazy" />
-        <div class="g-body">
-          <span class="badge">Runner up</span>
-          <h2>Mechatrix ’25</h2>
-          <p>Paper presentation, NIET Coimbatore.</p>
+      <section class="gallery-block">
+        <h2>Paper Presentation Mechatrix ’25</h2>
+        <p class="lead">Runner up · NIET Coimbatore</p>
+        <div class="gallery-grid stagger">
+          <button class="g-card" type="button" data-lightbox="assets/PaperPresentation'25.jpeg" data-caption="Paper Presentation Mechatrix ’25 — Runner up, NIET Coimbatore" data-cursor="view">
+            <img src="assets/PaperPresentation'25.jpeg" alt="Paper Presentation Mechatrix 2025" width="640" height="420" loading="lazy" />
+            <div class="g-body"><span class="badge">Runner up</span><h2>Mechatrix ’25</h2></div>
+          </button>
+          <button class="g-card" type="button" data-lightbox="assets/paperpresentation2.png" data-caption="Paper Presentation Mechatrix ’25 — NIET Coimbatore" data-cursor="view">
+            <img src="assets/paperpresentation2.png" alt="Paper Presentation Mechatrix 2025, second photo" width="640" height="420" loading="lazy" />
+            <div class="g-body"><span class="badge">Runner up</span><h2>Mechatrix ’25</h2></div>
+          </button>
         </div>
-      </button>
+      </section>
 
-      <button class="g-card" type="button" data-lightbox="assets/BigHacks'25.jpeg" data-caption="BigHacks ’25 — Top 6 finalist, Acharya Institute of Technology" data-cursor="view">
-        <img src="assets/BigHacks'25.jpeg" alt="BigHacks 2025" width="640" height="420" loading="lazy" />
-        <div class="g-body">
-          <span class="badge">Top 6</span>
-          <h2>BigHacks ’25</h2>
-          <p>National hackathon, Acharya Institute of Technology, Bangalore.</p>
+      <section class="gallery-block">
+        <h2>BigHacks ’25</h2>
+        <p class="lead">Top 6 finalist · Acharya Institute of Technology</p>
+        <div class="gallery-grid stagger">
+          <button class="g-card" type="button" data-lightbox="assets/BigHacks'25.jpeg" data-caption="BigHacks ’25 — Top 6 finalist, Acharya Institute of Technology" data-cursor="view">
+            <img src="assets/BigHacks'25.jpeg" alt="BigHacks 2025" width="640" height="420" loading="lazy" />
+            <div class="g-body"><span class="badge">Top 6</span><h2>BigHacks ’25</h2></div>
+          </button>
+          <button class="g-card" type="button" data-lightbox="assets/BIGHACKS2.jpeg" data-caption="BigHacks ’25 — Acharya Institute of Technology" data-cursor="view">
+            <img src="assets/BIGHACKS2.jpeg" alt="BigHacks 2025, second photo" width="640" height="420" loading="lazy" />
+            <div class="g-body"><span class="badge">Top 6</span><h2>BigHacks ’25</h2></div>
+          </button>
         </div>
-      </button>
+      </section>
 
-      <button class="g-card" type="button" data-lightbox="assets/WEC.jpg" data-caption="Women Empowerment Cell — Joint Secretary, CIT" data-cursor="view">
-        <img src="assets/WEC.jpg" alt="Women Empowerment Cell" width="640" height="420" loading="lazy" />
-        <div class="g-body">
-          <span class="badge">Leadership</span>
-          <h2>Women Empowerment Cell</h2>
-          <p>Joint Secretary, CIT. Previously Editor.</p>
+      <section class="gallery-block">
+        <h2>Women Empowerment Cell</h2>
+        <p class="lead">Joint Secretary · CIT</p>
+        <div class="gallery-grid stagger">
+          <button class="g-card" type="button" data-lightbox="assets/WEC.jpg" data-caption="Women Empowerment Cell — Joint Secretary, CIT" data-cursor="view">
+            <img src="assets/WEC.jpg" alt="Women Empowerment Cell" width="640" height="420" loading="lazy" />
+            <div class="g-body"><span class="badge">Leadership</span><h2>WEC</h2></div>
+          </button>
+          <button class="g-card" type="button" data-lightbox="assets/WEC2.jpeg" data-caption="Women Empowerment Cell — CIT" data-cursor="view">
+            <img src="assets/WEC2.jpeg" alt="Women Empowerment Cell, second photo" width="640" height="420" loading="lazy" />
+            <div class="g-body"><span class="badge">Leadership</span><h2>WEC</h2></div>
+          </button>
         </div>
-      </button>
+      </section>
 
-      <button class="g-card" type="button" data-lightbox="assets/Rotaract.jpeg" data-caption="Rotaract Club of CIT — Event Secretary" data-cursor="view">
-        <img src="assets/Rotaract.jpeg" alt="Rotaract Club of CIT" width="640" height="420" loading="lazy" />
-        <div class="g-body">
-          <span class="badge">Leadership</span>
-          <h2>Rotaract Club of CIT</h2>
-          <p>Event Secretary, February–April 2025.</p>
+      <section class="gallery-block">
+        <h2>Rotaract Club of CIT</h2>
+        <p class="lead">Event Secretary · February–April 2025</p>
+        <div class="gallery-grid stagger">
+          <button class="g-card" type="button" data-lightbox="assets/Rotaract.jpeg" data-caption="Rotaract Club of CIT — Event Secretary" data-cursor="view">
+            <img src="assets/Rotaract.jpeg" alt="Rotaract Club of CIT" width="640" height="420" loading="lazy" />
+            <div class="g-body"><span class="badge">Leadership</span><h2>Rotaract</h2></div>
+          </button>
+          <button class="g-card" type="button" data-lightbox="assets/ROTARACT2.jpeg" data-caption="Rotaract Club of CIT" data-cursor="view">
+            <img src="assets/ROTARACT2.jpeg" alt="Rotaract Club of CIT, second photo" width="640" height="420" loading="lazy" />
+            <div class="g-body"><span class="badge">Leadership</span><h2>Rotaract</h2></div>
+          </button>
         </div>
-      </button>
+      </section>
 
-      <button class="g-card" type="button" data-lightbox="assets/EDC.jpeg" data-caption="Entrepreneur Development Cell — Outreach, CIT" data-cursor="view">
-        <img src="assets/EDC.jpeg" alt="Entrepreneur Development Cell" width="640" height="420" loading="lazy" />
-        <div class="g-body">
-          <span class="badge">Leadership</span>
-          <h2>Entrepreneur Development Cell</h2>
-          <p>Outreach team, June 2024–June 2025.</p>
+      <section class="gallery-block">
+        <h2>Entrepreneur Development Cell</h2>
+        <p class="lead">Outreach · June 2024 – June 2025</p>
+        <div class="gallery-grid stagger">
+          <button class="g-card" type="button" data-lightbox="assets/EDC.jpeg" data-caption="Entrepreneur Development Cell — Outreach, CIT" data-cursor="view">
+            <img src="assets/EDC.jpeg" alt="Entrepreneur Development Cell" width="640" height="420" loading="lazy" />
+            <div class="g-body"><span class="badge">Leadership</span><h2>EDC</h2></div>
+          </button>
+          <button class="g-card" type="button" data-lightbox="assets/EDC2.jpeg" data-caption="Entrepreneur Development Cell — CIT" data-cursor="view">
+            <img src="assets/EDC2.jpeg" alt="Entrepreneur Development Cell, second photo" width="640" height="420" loading="lazy" />
+            <div class="g-body"><span class="badge">Leadership</span><h2>EDC</h2></div>
+          </button>
         </div>
-      </button>
+      </section>
+
+      <section class="gallery-block">
+        <h2>Coligo</h2>
+        <p class="lead">Event photos</p>
+        <div class="gallery-grid stagger">
+          <button class="g-card" type="button" data-lightbox="assets/COLIGO.jpeg" data-caption="Coligo" data-cursor="view">
+            <img src="assets/COLIGO.jpeg" alt="Coligo event" width="640" height="420" loading="lazy" />
+            <div class="g-body"><span class="badge">Event</span><h2>Coligo</h2></div>
+          </button>
+          <button class="g-card" type="button" data-lightbox="assets/COLIGO1.jpeg" data-caption="Coligo" data-cursor="view">
+            <img src="assets/COLIGO1.jpeg" alt="Coligo event, second photo" width="640" height="420" loading="lazy" />
+            <div class="g-body"><span class="badge">Event</span><h2>Coligo</h2></div>
+          </button>
+          <button class="g-card" type="button" data-lightbox="assets/COLIGO2.jpeg" data-caption="Coligo" data-cursor="view">
+            <img src="assets/COLIGO2.jpeg" alt="Coligo event, third photo" width="640" height="420" loading="lazy" />
+            <div class="g-body"><span class="badge">Event</span><h2>Coligo</h2></div>
+          </button>
+        </div>
+      </section>
     </div>
   </main>
 
   <footer class="footer">
     <div class="wrap footer-inner">
       <p>© <span id="year">2026</span> Lathika Sakthivel</p>
-      <p><a href="index.html" data-cursor="link">Home</a> · <a href="index.html#contact" data-cursor="link">Contact</a></p>
+      <p><a href="achievements.html">Achievements</a> · <a href="index.html">Home</a></p>
     </div>
   </footer>
 
