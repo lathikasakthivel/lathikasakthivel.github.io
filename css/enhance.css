@@ -367,29 +367,8 @@ header .fs-4 {
 }
 
 @media (min-width: 992px) {
-  header .row.gx-5 {
-    align-items: center;
-  }
-
-  header .col-xxl-5 {
-    flex: 0 0 48%;
-    max-width: 48%;
-    width: 48%;
-  }
-
-  header .col-xxl-7 {
-    flex: 0 0 52%;
-    max-width: 52%;
-    width: 52%;
-  }
-
   header .text-center {
     text-align: left !important;
-  }
-
-  header .d-flex.justify-content-center {
-    justify-content: flex-end !important;
-    margin-top: 0 !important;
   }
 }
 
@@ -432,6 +411,11 @@ section .my-5 {
   margin-bottom: 0.5rem !important;
 }
 
+.hero-copy {
+  max-width: 44rem;
+}
+
+.social-link,
 .fs-2 a {
   display: inline-flex;
   min-width: 44px;
@@ -441,13 +425,29 @@ section .my-5 {
   border-radius: 10px;
   background: var(--surface);
   border: 1px solid var(--border);
-  transition: transform var(--transition), box-shadow var(--transition);
+  color: var(--primary) !important;
+  -webkit-text-fill-color: var(--primary);
+  background-image: none;
+  text-decoration: none;
+  font-size: 1.35rem;
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
 }
 
+.social-link i,
+.fs-2 a i {
+  color: var(--primary);
+  -webkit-text-fill-color: var(--primary);
+  background: none;
+}
+
+.social-link:hover,
+.social-link:focus-visible,
 .fs-2 a:hover,
 .fs-2 a:focus-visible {
   transform: translateY(-2px);
   box-shadow: var(--shadow);
+  border-color: rgba(30, 48, 243, 0.28);
+  color: var(--primary) !important;
 }
 
 .timeline .card {
