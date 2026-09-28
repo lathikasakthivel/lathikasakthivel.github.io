@@ -16,11 +16,12 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+        <link href="css/enhance.css" rel="stylesheet" />
     </head>
     <body class="d-flex flex-column h-100 bg-light">
         <main class="flex-shrink-0">
             <!-- Navigation-->
-            <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
+            <nav class="navbar navbar-expand-lg navbar-light bg-white py-3 site-nav sticky-top">
                 <div class="container px-5">
                     <a class="navbar-brand" href="index.html"><span class="fw-bolder text-primary">Lathika Sakthivel</span></a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
@@ -52,7 +53,7 @@
                                         <h2 class="fw-bolder">Lathika Sakthivel</h2>
                                     </div>
                                     
-                                    <div class="mb-5">
+                                    <div class="mb-5 about-copy">
     
                                         <p>I’m Lathika, currently pursuing my integrated MSc in Data Science at Coimbatore Institute of Technology. I have a strong foundation in Python, machine learning, statistical analysis, and data-driven problem solving. Through my academic journey and projects, I’ve developed a structured approach to understanding problems and transforming data into meaningful insights.</p>
                                         
@@ -69,7 +70,7 @@ I’m eager to continue learning, grow as a data professional, and contribute to
                                         <h3 class="fw-bolder mb-3">Skills & Expertise</h3>
                                         <div class="row row-cols-1 row-cols-md-2 mb-4">
                                             <div class="col">
-                                                <ul>
+                                                <ul class="chip-list">
                                                     <li>Machine Learning</li>
                                                     <li>Deep Learning (CNN, RNN, LSTM, Autoencoders)</li>
                                                     <li>Graph Neural Networks</li>
@@ -78,7 +79,7 @@ I’m eager to continue learning, grow as a data professional, and contribute to
                                                 </ul>
                                             </div>
                                             <div class="col">
-                                                <ul>
+                                                <ul class="chip-list">
                                                     <li>Data Visualization (PowerBI, Matplotlib, Seaborn)</li>
                                                     <li>Database Management (SQL, PostgreSQL)</li>
                                                     <li>Cloud Platforms (AWS)</li>
@@ -90,29 +91,31 @@ I’m eager to continue learning, grow as a data professional, and contribute to
                                     
                                     <div class="mb-5">
                                         <h3 class="fw-bolder mb-3">Education</h3>
-                                        <div class="mb-4">
+                                        <div class="timeline">
+                                        <div class="mb-4 timeline-item">
                                             <h5>MSc.,Data Science (Integrated)</h5>
                                             <p class="text-muted">Coimbatore Institute of Technology | CGPA: 9.13</p>
                                             <p>Focusing on machine learning, deep learning, and statistical modeling with coursework in predictive analytics, computer vision, and intelligent automation.</p>
                                         </div>
-                                        <div>
+                                        <div class="timeline-item">
                                             <h5>Higher Secondary Education</h5>
                                             <p class="text-muted">PKD Matriculation Higher Secondary School | Percentage: 91%</p>
                                             <p>Completed higher secondary education with a strong foundation in science and mathematics.</p>
+                                        </div>
                                         </div>
                                     </div>
                                     
                                     <div class="mb-5">
                                         <h3 class="fw-bolder mb-3">Certifications</h3>
-                                        <ul>
-                                            <li><strong>NPTEL:</strong> Python for Data Science (September 2024)</li>
-                                            <li><strong>Coursera:</strong> PowerBI</li>
-                                        </ul>
+                                        <div class="cert-grid">
+                                            <div class="cert-card"><strong>NPTEL:</strong> Python for Data Science (September 2024)</div>
+                                            <div class="cert-card"><strong>Coursera:</strong> PowerBI</div>
+                                        </div>
                                     </div>
                                     
                                     <div class="mb-5">
                                         <h3 class="fw-bolder mb-3">Achievements</h3>
-                                        <ul>
+                                        <ul class="chip-list">
                                             <li><strong>Winner:</strong> UnHack 2025 Hackathon organized by KLA</li>
                                             <li><strong>Winner:</strong> Thinklytics Login 2025, Tech Symposium by PSG College of Technology</li>
                                             <li><strong>Winner:</strong> Code Sprint Login 2025, Tech Symposium by PSG College of Technology</li>
@@ -124,7 +127,7 @@ I’m eager to continue learning, grow as a data professional, and contribute to
                                     
                                     <div>
                                         <h3 class="fw-bolder mb-3">Leadership Roles & Experiences</h3>
-                                        <ul>
+                                        <ul class="chip-list">
                                             <li><strong>Joint Secretary</strong> - Women Empowerment Cell (June 2025 – May 2026)</li>
                                             <li><strong>Editor</strong> - Women Empowerment Cell (May 2024 – May 2025)</li>
                                             <li><strong>Event Secretary</strong> - Rotaract Club of CIT (February 2025 – April 2025)</li>
@@ -189,6 +192,7 @@ I’m eager to continue learning, grow as a data professional, and contribute to
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
+        <script src="js/enhance.js"></script>
     </body>
 </html>
 
