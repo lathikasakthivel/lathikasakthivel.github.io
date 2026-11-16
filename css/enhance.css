@@ -588,7 +588,7 @@ section {
 }
 
 .timeline .card {
-  margin-left: 0.1rem;
+  margin-left: 0;
 }
 
 /* ---------- Skills ---------- */
@@ -675,9 +675,10 @@ section {
 /* ---------- Timeline ---------- */
 .timeline {
   --track-x: 8px;
-  --dot: 11px;
+  --dot: 12px;
+  --rail: 1.75rem;
   position: relative;
-  padding-left: 1.75rem;
+  padding-left: var(--rail);
 }
 
 .timeline::before {
@@ -690,6 +691,7 @@ section {
   border-radius: 2px;
   background: linear-gradient(180deg, var(--primary), var(--secondary));
   opacity: 0.35;
+  transform: translateX(-50%);
 }
 
 .timeline-item {
@@ -701,7 +703,7 @@ section {
 .timeline-item::before {
   content: "";
   position: absolute;
-  left: calc(-1.75rem + var(--track-x) - (var(--dot) / 2) + 1px);
+  left: calc(0px - var(--rail) + var(--track-x));
   top: 50%;
   width: var(--dot);
   height: var(--dot);
@@ -709,7 +711,7 @@ section {
   background: var(--surface);
   border: 2px solid var(--primary);
   box-shadow: 0 0 0 3px rgba(30, 48, 243, 0.1);
-  transform: translateY(-50%);
+  transform: translate(-50%, -50%);
   z-index: 2;
 }
 
@@ -1235,11 +1237,7 @@ footer .container:empty {
   }
 
   .timeline {
-    padding-left: 1.5rem;
-  }
-
-  .timeline-item::before {
-    left: calc(-1.5rem + var(--track-x) - (var(--dot) / 2) + 1px);
+    --rail: 1.5rem;
   }
 
   .d-flex.align-items-center.justify-content-between.mb-4 .btn {
