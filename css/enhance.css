@@ -157,14 +157,17 @@ p {
   right: max(1rem, 2vw);
   bottom: max(1rem, 2.5vw);
   z-index: 1050;
-  width: 2.85rem;
-  height: 2.85rem;
+  width: 3rem;
+  height: 3rem;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   border: 0;
   border-radius: 999px;
   color: #fff;
+  font-size: 1.15rem;
+  line-height: 1;
+  cursor: pointer;
   background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
   box-shadow: 0 10px 24px rgba(30, 48, 243, 0.28);
   opacity: 0;
@@ -172,6 +175,13 @@ p {
   pointer-events: none;
   transform: translateY(10px);
   transition: opacity var(--transition), transform var(--transition), visibility var(--transition), box-shadow var(--transition);
+}
+
+.back-to-top svg {
+  width: 1.15rem;
+  height: 1.15rem;
+  display: block;
+  fill: currentColor;
 }
 
 .back-to-top.is-visible {
