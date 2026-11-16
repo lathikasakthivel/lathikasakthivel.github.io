@@ -22,7 +22,7 @@
 
 html {
   scroll-behavior: smooth;
-  overflow-x: hidden;
+  overflow-x: clip;
   -webkit-text-size-adjust: 100%;
 }
 
@@ -30,7 +30,7 @@ body {
   color: var(--text);
   background-color: var(--background);
   line-height: 1.7;
-  overflow-x: hidden;
+  overflow-x: clip;
   overflow-wrap: break-word;
   min-height: 100vh;
   min-height: 100dvh;
@@ -153,48 +153,41 @@ p {
 }
 
 .back-to-top {
-  position: fixed;
-  right: max(1rem, 2vw);
-  bottom: max(1rem, 2.5vw);
-  z-index: 1050;
-  width: 3rem;
-  height: 3rem;
-  display: inline-flex;
+  position: fixed !important;
+  right: max(1rem, env(safe-area-inset-right, 0px) + 1rem);
+  bottom: max(1rem, env(safe-area-inset-bottom, 0px) + 1rem);
+  z-index: 2147483000 !important;
+  width: 3.15rem;
+  height: 3.15rem;
+  display: inline-flex !important;
   align-items: center;
   justify-content: center;
   border: 0;
   border-radius: 999px;
-  color: #fff;
-  font-size: 1.15rem;
+  color: #fff !important;
+  font-size: 1.2rem;
   line-height: 1;
   cursor: pointer;
-  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-  box-shadow: 0 10px 24px rgba(30, 48, 243, 0.28);
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-  transform: translateY(10px);
-  transition: opacity var(--transition), transform var(--transition), visibility var(--transition), box-shadow var(--transition);
+  background: linear-gradient(135deg, #1e30f3 0%, #e21e80 100%) !important;
+  box-shadow: 0 10px 24px rgba(30, 48, 243, 0.32);
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+  transform: none;
+  transition: box-shadow var(--transition), transform var(--transition);
 }
 
 .back-to-top svg {
-  width: 1.15rem;
-  height: 1.15rem;
+  width: 1.2rem;
+  height: 1.2rem;
   display: block;
   fill: currentColor;
 }
 
-.back-to-top.is-visible {
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
-  transform: translateY(0);
-}
-
 .back-to-top:hover,
 .back-to-top:focus-visible {
-  color: #fff;
-  box-shadow: 0 14px 28px rgba(226, 30, 128, 0.28);
+  color: #fff !important;
+  box-shadow: 0 14px 28px rgba(226, 30, 128, 0.32);
   transform: translateY(-2px);
 }
 
@@ -1462,10 +1455,10 @@ footer .container:empty {
   }
 
   .back-to-top,
-  .back-to-top.is-visible,
   .back-to-top:hover,
   .back-to-top:focus-visible {
     transform: none !important;
+    transition: none !important;
   }
 
   .card:hover,

@@ -12,10 +12,17 @@
   var nav = document.querySelector(".navbar");
   var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
+  function scrollY() {
+    return (
+      window.pageYOffset ||
+      document.documentElement.scrollTop ||
+      document.body.scrollTop ||
+      0
+    );
+  }
+
   function onScroll() {
-    var y = window.scrollY || window.pageYOffset || 0;
-    if (nav) nav.classList.toggle("is-scrolled", y > 8);
-    if (backBtn) backBtn.classList.toggle("is-visible", y > 280);
+    if (nav) nav.classList.toggle("is-scrolled", scrollY() > 8);
   }
 
   var backBtn = document.querySelector(".back-to-top");
@@ -24,16 +31,24 @@
     backBtn.type = "button";
     backBtn.className = "back-to-top";
     backBtn.setAttribute("aria-label", "Back to top");
+    backBtn.setAttribute("title", "Back to top");
     backBtn.innerHTML =
       '<svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 3.21l4.65 4.65a.75.75 0 0 1-1.06 1.06L8.75 5.44V12.5a.75.75 0 0 1-1.5 0V5.44L4.41 8.92a.75.75 0 1 1-1.06-1.06L8 3.21z"/></svg>';
     document.body.appendChild(backBtn);
   }
 
-  backBtn.addEventListener("click", function () {
-    window.scrollTo({ top: 0, behavior: reduce ? "auto" : "smooth" });
+  backBtn.addEventListener("click", function (e) {
+    e.preventDefault();
+    try {
+      window.scrollTo({ top: 0, behavior: reduce ? "auto" : "smooth" });
+    } catch (err) {
+      document.documentElement.scrollTop = 0;
+      document.body.scrollTop = 0;
+    }
   });
 
   window.addEventListener("scroll", onScroll, { passive: true });
+  document.addEventListener("scroll", onScroll, { passive: true });
   onScroll();
 
   var path = (location.pathname || "/").toLowerCase();
