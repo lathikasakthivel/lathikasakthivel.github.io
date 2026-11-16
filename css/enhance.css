@@ -624,6 +624,30 @@ section {
   margin-bottom: 0 !important;
 }
 
+.skill-block {
+  margin-bottom: 2rem;
+}
+
+.skill-block:last-child {
+  margin-bottom: 0;
+}
+
+.skill-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.85rem;
+}
+
+.skill-grid > div {
+  min-height: 3.35rem;
+}
+
+@media (max-width: 767.98px) {
+  .skill-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 .chip-list {
   display: grid;
   grid-template-columns: 1fr;
