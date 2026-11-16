@@ -10,9 +10,28 @@
   }
 
   var nav = document.querySelector(".navbar");
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
   function onScroll() {
-    if (nav) nav.classList.toggle("is-scrolled", window.scrollY > 8);
+    var y = window.scrollY || window.pageYOffset || 0;
+    if (nav) nav.classList.toggle("is-scrolled", y > 8);
+    if (backBtn) backBtn.classList.toggle("is-visible", y > 420);
   }
+
+  var backBtn = document.querySelector(".back-to-top");
+  if (!backBtn) {
+    backBtn = document.createElement("button");
+    backBtn.type = "button";
+    backBtn.className = "back-to-top";
+    backBtn.setAttribute("aria-label", "Back to top");
+    backBtn.innerHTML = '<i class="bi bi-arrow-up" aria-hidden="true"></i>';
+    document.body.appendChild(backBtn);
+  }
+
+  backBtn.addEventListener("click", function () {
+    window.scrollTo({ top: 0, behavior: reduce ? "auto" : "smooth" });
+  });
+
   window.addEventListener("scroll", onScroll, { passive: true });
   onScroll();
 
@@ -47,7 +66,6 @@
     }
   });
 
-  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   var targets = document.querySelectorAll(
     ".card, .cert-card, .project-card, .chip-list li, .bg-light.rounded-4.p-3"
   );
