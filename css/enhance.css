@@ -739,6 +739,23 @@ section {
   margin-bottom: 0.85rem;
 }
 
+.project-card .project-kicker {
+  color: var(--muted-text);
+  font-weight: 600;
+  font-size: 0.92rem;
+  margin-bottom: 0.85rem;
+}
+
+.project-card ul {
+  margin: 0 0 0.85rem;
+  padding-left: 1.15rem;
+  color: var(--muted-text);
+}
+
+.project-card li {
+  margin-bottom: 0.4rem;
+}
+
 .project-card .btn {
   margin-top: 0.35rem;
 }
