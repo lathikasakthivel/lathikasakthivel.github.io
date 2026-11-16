@@ -16,11 +16,13 @@
   window.addEventListener("scroll", onScroll, { passive: true });
   onScroll();
 
-  var file = (location.pathname.split("/").pop() || "index.html").toLowerCase();
-  if (!file) file = "index.html";
+  var path = (location.pathname || "/").toLowerCase();
+  var file = path.split("/").pop();
+  var isHome = !file || file === "index.html";
   document.querySelectorAll(".navbar .nav-link").forEach(function (link) {
     var href = (link.getAttribute("href") || "").toLowerCase();
-    if (href === file) {
+    var linkIsHome = href === "/" || href === "index.html" || href === "./";
+    if ((isHome && linkIsHome) || (!isHome && href === file)) {
       link.classList.add("active");
       link.setAttribute("aria-current", "page");
     }
